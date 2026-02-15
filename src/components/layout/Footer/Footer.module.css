@@ -1,0 +1,6 @@
+.footer {
+  clear: both;
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+}
