@@ -13,6 +13,12 @@ export const Header = ({ onSearch }: HeaderProps) => {
   const handleSearch = () => {
     onSearch(searchQuery);
   };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>🎬 Movie Library</h1>
@@ -21,6 +27,7 @@ export const Header = ({ onSearch }: HeaderProps) => {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={handleKeyPress}
           placeholder="Введите название фильма..."
         />
         <Button text="Найти" onClick={handleSearch} />

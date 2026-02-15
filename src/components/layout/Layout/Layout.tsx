@@ -20,8 +20,8 @@ export const Layout = ({ children }: LayoutProps) => {
         <main className={styles.main}>{children}</main>
 
         {/**Footer */}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };
