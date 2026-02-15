@@ -1,8 +1,9 @@
+import Movies from './api/Movies';
+
 function App() {
-  const count = 1;
   return (
     <>
-      <h1>{count} </h1>
+      <Movies />
     </>
   );
 }
