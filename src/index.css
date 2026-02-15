@@ -1,0 +1,44 @@
+:root {
+  /* Основные цвета */
+  --primary-color: #667eea;
+  --primary-hover: #764ba2;
+  --secondary-color: #48bb78;
+  --danger-color: #f56565;
+
+  /* Фоновые цвета */
+  --bg-main: #f7fafc;
+  --bg-card: #ffffff;
+  --bg-header: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Текст */
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --text-light: #ffffff;
+
+  /* Границы и тени */
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Размеры */
+  --border-radius: 8px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+
+  /* Типографика */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  /* Анимации */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+
+  /* Брейкпоинты */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
