@@ -25,4 +25,20 @@
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
+
+  /* Типографика */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  /* Анимации */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+
+  /* Брейкпоинты */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
 }
