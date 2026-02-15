@@ -17,7 +17,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`${styles.container} ${styles[variant]} ${styles[size]} `}
+      className={`${styles.base} ${styles[variant]} ${styles[size]}`}
       onClick={onClick}
       disabled={disabled}
     >

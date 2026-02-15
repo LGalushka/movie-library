@@ -1,9 +1,11 @@
 :root {
   /* Основные цвета */
-  --primary-color: #667eea;
-  --primary-hover: #764ba2;
-  --secondary-color: #48bb78;
-  --danger-color: #f56565;
+  --primary-color: #3498db;
+  --primary-hover: #2980b9;
+  --secondary-color: #95a5a6;
+  --secondary-hover: #7f8c8d;
+  --danger-color: #e74c3c;
+  --danger-hover: #c0392b;
 
   /* Фоновые цвета */
   --bg-main: #f7fafc;

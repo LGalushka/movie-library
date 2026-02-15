@@ -1,5 +1,11 @@
+import MoviesLibrary from './pages/MovieLibrary';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <MoviesLibrary />
+    </>
+  );
 }
 
 export default App;

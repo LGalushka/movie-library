@@ -1,27 +1,27 @@
 import type React from 'react';
 import styles from './Layout.module.css';
-import { Header } from '../Header';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { Footer } from '../Footer/Footer';
 
 interface LayoutProps {
-  children: React.ReactNode; //сюда MoviGrid
-  onSearch: (query: string) => void; // функция поиска из Header
+  children: React.ReactNode;
 }
 
-export const Layout = ({ children, onSearch }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={styles.layout}>
-      <Header onSearch={onSearch} />
+      {/**Header будет здесь */}
 
+      {/**Основная область */}
       <div className={styles.mainContainer}>
         <Sidebar />
 
-        <main className={styles.content}>
-          {children} {/**здесь будет MovieGrid или другие страницы */}
-        </main>
+        {/**Основной контект (children) */}
+        <main className={styles.main}>{children}</main>
+
+        {/**Footer */}
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

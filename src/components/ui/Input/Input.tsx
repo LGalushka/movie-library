@@ -11,7 +11,7 @@ interface InputProps {
 export const Input = ({ type = 'text', onChange, placeholder, value }: InputProps) => {
   return (
     <input
-      className={styles.container}
+      className={styles.input}
       placeholder={placeholder}
       onChange={onChange}
       type={type}
