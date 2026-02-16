@@ -8,7 +8,7 @@ interface Movie {
   Poster: string;
 }
 
-function Movies() {
+function MoviesLibrary() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [search, setSearch] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -80,4 +80,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default MoviesLibrary;

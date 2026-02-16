@@ -1,9 +1,9 @@
-import Movies from './api/Movies';
+import MoviesLibrary from './api/MoviesLibrary';
 
 function App() {
   return (
     <>
-      <Movies />
+      <MoviesLibrary />
     </>
   );
 }
