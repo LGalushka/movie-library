@@ -1,11 +1,5 @@
-import MoviesLibrary from './api/MoviesLibrary';
-
 function App() {
-  return (
-    <>
-      <MoviesLibrary />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
