@@ -1,0 +1,29 @@
+:root {
+  /* Основные */
+  --bg-main: #0f172a; /* тёмно-синий (как небо ночью) */
+  --bg-card: #1e293b; /* чуть светлее — для карточек */
+  --bg-header: #0c1427; /* глубокий синий — шапка */
+  --bg-sidebar: #0f172a;
+
+  /* Текст */
+  --text-primary: #e2e8f0; /* светло-серый */
+  --text-secondary: #94a3b8; /* серый */
+  --text-light: #ffffff; /* белый */
+
+  /* Акценты */
+  --accent-primary: #60a5fa; /* небесно-голубой — как у Netflix/Disney+ */
+  --accent-hover: #3b82f6;
+  --accent-danger: #ef4444; /* красный для удаления */
+
+  /* Границы и тени */
+  --border-color: #334155;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Размеры и типографика */
+  --border-radius: 12px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
