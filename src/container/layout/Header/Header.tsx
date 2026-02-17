@@ -1,0 +1,48 @@
+import React, { useState } from 'react';
+import styles from './Header.module.css';
+import { Input } from '../../ui/Input';
+import { Button } from '../../ui/Button';
+
+interface HeaderProps {
+  onSearch: (qury: string) => void;
+  loading?: boolean;
+}
+
+export const Header = ({ onSearch, loading }: HeaderProps) => {
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
+  const handleSearch = () => {
+    console.log('Ищем:', searchQuery);
+
+    if (searchQuery.trim()) {
+      console.log('Передаю в onSearch:', searchQuery);
+      onSearch(searchQuery);
+      setSearchQuery('');
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+  return (
+    <header className={styles.header}>
+      <h1 className={styles.title}>🎬 Movie Library</h1>
+      <div className={styles.searchContainer}>
+        <Input
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={handleKeyPress}
+          placeholder="Введите название фильма..."
+        />
+        <Button
+          text={loading ? 'Поиск...' : 'Поиск'}
+          onClick={handleSearch}
+          disabled={!searchQuery.trim() || loading}
+        />
+      </div>
+    </header>
+  );
+};
