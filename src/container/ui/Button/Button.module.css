@@ -1,14 +1,17 @@
 .button {
-  padding: var(--padding-sm);
-  background: var(--bg-main);
-  color: var(--text-primary);
+  background: var(--accent-primary);
+  color: var(--text-light);
   border: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-lg);
+  padding: var(--padding-sm);
+  font-family: var(--font-family);
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
-.button:hover {
-  background: var(--bg-header);
+.button:hover:not(:disabled) {
+  background: var(--accent-hover);
 }
 
 .button:disabled {
