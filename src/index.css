@@ -33,3 +33,15 @@
   --padding-md: 10px 18px;
   --padding-lg: 12px 20px;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}

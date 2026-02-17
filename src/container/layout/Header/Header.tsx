@@ -4,14 +4,14 @@ import { Input } from '../../ui/Input';
 import { Button } from '../../ui/Button';
 
 interface HeaderProps {
-  onSearch: (qury: string) => void;
+  onSearch?: (qury: string) => void;
 }
 
 export const Header = ({ onSearch }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const handleSearch = () => {
-    if (searchQuery.trim()) {
+    if (searchQuery.trim() && onSearch) {
       onSearch(searchQuery);
       setSearchQuery('');
     }
