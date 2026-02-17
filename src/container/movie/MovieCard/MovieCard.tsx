@@ -6,11 +6,13 @@ interface MovieCardProps {
 }
 
 export const MovieCard = ({ movie }: MovieCardProps) => {
+  console.log('Рендерим карточку:', movie.Title);
+
   const posterUrl =
     movie.Poster !== 'N/A' ? movie.Poster : 'https://placehold.co/300x450?text=No+Poster';
   return (
     <div className={styles.card}>
-      <img src={posterUrl} alt={movie.Title} className={styles.poster} loading="lazy" />
+      <img src={posterUrl} alt={movie.Title} className={styles.poster} />
       <h3 className={styles.title}>{movie.Title}</h3>
       <p className={styles.year}>{movie.Year}</p>
     </div>

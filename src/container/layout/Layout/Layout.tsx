@@ -6,13 +6,20 @@ import { Footer } from '../Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
-  onSearch?: (query: string) => void;
+  onSearch: (query: string) => void;
+  loading?: boolean;
 }
 
-export const Layout = ({ children, onSearch }: LayoutProps) => {
+export const Layout = ({ children, onSearch, loading }: LayoutProps) => {
   return (
     <div className={styles.layout}>
-      <Header onSearch={onSearch} />
+      <Header
+        onSearch={(query) => {
+          console.log('Layout получил:', query);
+          onSearch(query);
+        }}
+        loading={loading}
+      />
 
       <div className={styles.container}>
         <Sidebar />

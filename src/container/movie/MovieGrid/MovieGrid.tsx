@@ -7,6 +7,7 @@ interface MovieGridProps {
 }
 
 export const MovieGrid = ({ movies }: MovieGridProps) => {
+  console.log('MovieGrid получил:', movies);
   if (!movies.length) {
     return (
       <div className={styles.empty}>

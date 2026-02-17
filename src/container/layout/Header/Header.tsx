@@ -4,14 +4,18 @@ import { Input } from '../../ui/Input';
 import { Button } from '../../ui/Button';
 
 interface HeaderProps {
-  onSearch?: (qury: string) => void;
+  onSearch: (qury: string) => void;
+  loading?: boolean;
 }
 
-export const Header = ({ onSearch }: HeaderProps) => {
+export const Header = ({ onSearch, loading }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const handleSearch = () => {
-    if (searchQuery.trim() && onSearch) {
+    console.log('Ищем:', searchQuery);
+
+    if (searchQuery.trim()) {
+      console.log('Передаю в onSearch:', searchQuery);
       onSearch(searchQuery);
       setSearchQuery('');
     }
@@ -33,7 +37,11 @@ export const Header = ({ onSearch }: HeaderProps) => {
           onKeyDown={handleKeyPress}
           placeholder="Введите название фильма..."
         />
-        <Button text="Поиск" onClick={handleSearch} disabled={!searchQuery.trim()} />
+        <Button
+          text={loading ? 'Поиск...' : 'Поиск'}
+          onClick={handleSearch}
+          disabled={!searchQuery.trim() || loading}
+        />
       </div>
     </header>
   );
