@@ -7,15 +7,14 @@ type MenuItem = 'home' | 'favorites' | 'settings';
 interface MENU {
   id: MenuItem;
   label: string;
-  icon: string;
 }
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState<MenuItem>('home');
 
   const menuItems: MENU[] = [
-    { id: 'home', label: '🏠 Главная', icon: '🏠' },
-    { id: 'favorites', label: '❤️ Избранное', icon: '❤️' },
-    { id: 'settings', label: '⚙️ Настройки', icon: '⚙️' },
+    { id: 'home', label: '🏠 Главная' },
+    { id: 'favorites', label: '❤️ Избранное' },
+    { id: 'settings', label: '⚙️ Настройки' },
   ];
 
   return (
@@ -25,7 +24,6 @@ const Sidebar = () => {
           <Button
             key={item.id}
             text={item.label}
-            icon={item.icon}
             onClick={() => setActiveItem(item.id)}
             variant={activeItem === item.id ? 'primary' : 'secondary'}
             fullWidth

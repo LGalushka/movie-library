@@ -10,6 +10,7 @@ const Footer = () => {
           <h4>🎬 Movie Library</h4>
           <p>Твой гид в мире кино</p>
         </div>
+
         <div className={styles.section}>
           <h4>Навигация</h4>
           <ul>
@@ -38,9 +39,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        <div className={styles.copyright}>© {currentYear} Movie Library. С любовью к кино 🎬</div>
       </div>
+      <div className={styles.copyright}>© {currentYear} Movie Library. С любовью к кино 🎬</div>
     </footer>
   );
 };
