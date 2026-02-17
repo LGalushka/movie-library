@@ -1,19 +1,70 @@
 .button {
-  background: var(--accent-primary);
-  color: var(--text-light);
   border: none;
   border-radius: var(--border-radius-lg);
-  padding: var(--padding-sm);
   font-family: var(--font-family);
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
 }
 
-.button:hover:not(:disabled) {
+/* Варианты */
+.primary {
+  background: var(--accent-primary);
+  color: var(--text-light);
+}
+
+.primary:hover:not(:disabled) {
   background: var(--accent-hover);
 }
 
+.secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.danger {
+  background: var(--accent-danger);
+  color: var(--text-light);
+}
+
+/* Размеры */
+.sm {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.md {
+  padding: var(--padding-sm);
+  font-size: 1rem;
+}
+
+.lg {
+  padding: var(--padding-lg);
+  font-size: 1.125rem;
+}
+
+/* На всю ширину */
+.fullWidth {
+  width: 100%;
+}
+
+/* Иконка */
+.icon {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+/* Disabled */
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
